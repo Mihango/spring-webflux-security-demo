@@ -23,9 +23,14 @@ public class User {
 
     private String password;
 
-    private String firstname;
+    private String firstName;
 
-    private String lastname;
+    private String lastName;
 
     private List<Role> roles;
+
+    public User(User user) {
+        this(user.getId(), user.getEmail(), user.getPassword(),
+                user.getFirstName(), user.getLastName(), user.getRoles());
+    }
 }
